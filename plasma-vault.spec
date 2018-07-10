@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: plasma-vault
-Version: 5.13.2
+Version: 5.12.6
 Release: 1
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: Plasma Vault - a tool for encrypted storage
@@ -31,7 +31,7 @@ BuildRequires: cmake(Qt5Widgets)
 Plasma Vault - a tool for encrypted storage
 
 %prep
-%autosetup
+%setup -q
 %cmake_kde5
 
 %build
