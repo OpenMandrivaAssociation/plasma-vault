@@ -1,4 +1,5 @@
 removed_sources:
+  plasma-vault-5.12.6.tar.xz: 6740590388074f48a0f7b9155785fbb70c86bb42
   plasma-vault-5.13.2.tar.xz: 959f330af25232ea95a13f23ff6a70213f242bbe
 sources:
-  plasma-vault-5.12.6.tar.xz: 6740590388074f48a0f7b9155785fbb70c86bb42
+  plasma-vault-5.12.7.tar.xz: 5ccec6d046a727306a9e13de5d5eac72f1ee2a3d
