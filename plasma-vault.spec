@@ -5,7 +5,7 @@
 
 Name: plasma-vault
 Version: 5.15.4
-Release: 1
+Release: 2
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: Plasma Vault - a tool for encrypted storage
 URL: http://kde.org/
@@ -26,6 +26,7 @@ BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(Qt5DBus)
 BuildRequires: cmake(Qt5Gui)
 BuildRequires: cmake(Qt5Widgets)
+Requires: cryfs
 
 %description
 Plasma Vault - a tool for encrypted storage
