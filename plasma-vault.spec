@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: plasma-vault
-Version: 5.15.5
+Version: 5.16.3
 Release: 1
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: Plasma Vault - a tool for encrypted storage
@@ -43,6 +43,7 @@ Plasma Vault - a tool for encrypted storage
 %find_lang %{name} --all-name --with-html
 
 %files -f %{name}.lang
+%{_libdir}/qt5/plugins/kf5/kfileitemaction/plasmavaultfileitemaction.so
 %{_libdir}/qt5/plugins/kf5/kded/plasmavault.so
 %{_libdir}/qt5/plugins/plasma/applets/plasma_applet_vault.so
 %{_datadir}/kservices5/plasma-applet-org.kde.plasma.vault.desktop
