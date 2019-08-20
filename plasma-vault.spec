@@ -1,11 +1,10 @@
-%define _disable_lto 1
 %define debug_package %{nil}
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: plasma-vault
 Version: 5.16.4
-Release: 1
+Release: 2
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: Plasma Vault - a tool for encrypted storage
 URL: http://kde.org/
@@ -29,10 +28,10 @@ BuildRequires: cmake(Qt5Widgets)
 Requires: cryfs
 
 %description
-Plasma Vault - a tool for encrypted storage
+Plasma Vault - a tool for encrypted storage.
 
 %prep
-%autosetup
+%autosetup -p1
 %cmake_kde5
 
 %build
