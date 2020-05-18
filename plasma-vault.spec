@@ -25,7 +25,9 @@ BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(Qt5DBus)
 BuildRequires: cmake(Qt5Gui)
 BuildRequires: cmake(Qt5Widgets)
+BuildRequires: kirigami
 Requires: cryfs
+Requires: kirigami
 
 %description
 Plasma Vault - a tool for encrypted storage.
