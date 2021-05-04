@@ -3,8 +3,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: plasma-vault
-Version: 5.21.4
-Release: 2
+Version: 5.21.5
+Release: 1
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: Plasma Vault - a tool for encrypted storage
 URL: http://kde.org/
