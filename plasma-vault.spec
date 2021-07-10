@@ -46,6 +46,5 @@ Plasma Vault - a tool for encrypted storage.
 %{_libdir}/qt5/plugins/kf5/kfileitemaction/plasmavaultfileitemaction.so
 %{_libdir}/qt5/plugins/kf5/kded/plasmavault.so
 %{_libdir}/qt5/plugins/plasma/applets/plasma_applet_vault.so
-%{_datadir}/kservices5/plasma-applet-org.kde.plasma.vault.desktop
 %{_datadir}/metainfo/org.kde.plasma.vault.appdata.xml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.vault
