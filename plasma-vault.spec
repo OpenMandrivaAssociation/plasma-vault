@@ -3,7 +3,7 @@
 
 Name: plasma-vault
 Version: 5.27.8
-Release: 1
+Release: 2
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: Plasma Vault - a tool for encrypted storage
 URL: http://kde.org/
