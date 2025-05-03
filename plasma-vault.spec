@@ -4,7 +4,7 @@
 %define gitbranch Plasma/6.0
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
-Name: plasma6-vault
+Name: plasma-vault
 Version: 6.3.4
 Release: %{?git:0.%{git}.}2
 %if 0%{?git:1}
@@ -37,27 +37,18 @@ BuildRequires: cmake(Qt6Gui)
 BuildRequires: cmake(Qt6Widgets)
 BuildRequires: cmake(Qt6Quick)
 Requires: cryfs
+# Renamed after 6.0 2025-05-03
+%rename plasma6-vault
+
+BuildSystem:	cmake
+BuildOption:	-DBUILD_QCH:BOOL=ON
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %patchlist
 plasma-vault-qt-6.9.patch
 
 %description
 Plasma Vault - a tool for encrypted storage.
-
-%prep
-%autosetup -p1 -n plasma-vault-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DBUILD_QCH:BOOL=ON \
-	-DBUILD_WITH_QT6:BOOL=ON \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-%find_lang %{name} --all-name --with-html
 
 %files -f %{name}.lang
 %{_qtdir}/plugins/kf6/kfileitemaction/plasmavaultfileitemaction.so
