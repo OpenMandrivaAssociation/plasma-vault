@@ -5,7 +5,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Name: plasma-vault
-Version: 6.4.5
+Version: 6.5.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/plasma-vault/-/archive/%{gitbranch}/plasma-vault-%{gitbranchd}.tar.bz2#/plasma-vault-%{git}.tar.bz2
@@ -53,5 +53,4 @@ Plasma Vault - a tool for encrypted storage.
 %{_qtdir}/plugins/kf6/kfileitemaction/plasmavaultfileitemaction.so
 %{_qtdir}/plugins/kf6/kded/plasmavault.so
 %{_qtdir}/plugins/plasma/applets/org.kde.plasma.vault.so
-%{_datadir}/metainfo/org.kde.plasma.vault.appdata.xml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.vault
