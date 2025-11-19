@@ -5,7 +5,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Name: plasma-vault
-Version: 6.5.2
+Version: 6.5.3
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/plasma-vault/-/archive/%{gitbranch}/plasma-vault-%{gitbranchd}.tar.bz2#/plasma-vault-%{git}.tar.bz2
